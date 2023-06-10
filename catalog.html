@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalog</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/js_78_Illia-Shatokhin/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/js_78_Illia-Shatokhin/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/js_78_Illia-Shatokhin/favicon-16x16.png" />
+    <link rel="manifest" href="/js_78_Illia-Shatokhin/site.webmanifest" />
+    <link rel="mask-icon" href="/js_78_Illia-Shatokhin/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+      rel="stylesheet"
+    />
+    
+    <script type="module" crossorigin src="/js_78_Illia-Shatokhin/assets/catalog-8d2c354d.js"></script>
+    <link rel="modulepreload" crossorigin href="/js_78_Illia-Shatokhin/assets/footer-modal-9ee15338.js">
+    <link rel="stylesheet" href="/js_78_Illia-Shatokhin/assets/footer-modal-67ea8af0.css">
+  </head>
+
+  <body>
+    <header class="header">
+  <div class="container mobile-header">
+    <!--<link rel="stylesheet" href="/header.css" />-->
+
+    <div class="logo-container">
+      <a class="logo-container-link" href="./index.html">
+        <picture class="main-logo">
+          <source
+            srcset="
+              ./img/header-logo-des.png    1x,
+              ./img/header-logo-des@2x.png 2x
+            "
+            media="(min-width: 1280px)"
+            type="image/png"
+            width="48"
+          />
+          <source
+            srcset="
+              ./img/header-logo-tab.png    1x,
+              ./img/header-logo-tab@2x.png 2x
+            "
+            media="(min-width: 768px)"
+            type="image/png"
+            width="48"
+          />
+          <source
+            srcset="./img/header-logo.png 1x, ./img/header-logo@2x.png 2x"
+            media="(max-width: 767px)"
+            type="image/png"
+          />
+          <img src="./img/header-logo.png" alt="image" width="32" height="32" />
+        </picture>
+        <h1 class="logo-text">Cinemania</h1>
+      </a>
+    </div>
+    <!--mobile menu-->
+    <nav id="table-menu" class="table-desktop">
+      <ul class="table-menu">
+        <li class="space" id="home">
+          <a class="hover-text" href="./index.html">HOME</a>
+        </li>
+        <li class="space" id="catalog">
+          <a class="hover-text" href="./catalog.html">CATALOG</a>
+        </li>
+        <li id="my-library">
+          <a class="hover-text" href="./my-library.html">MY LIBRARY</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="menu-container checkbox">
+      <label for="menu-toggle" class="menu-toggle-label"
+        >MENU
+        <input type="checkbox" id="menu-toggle" />
+      </label>
+      <div id="mobile-menu" class="">
+        <div class="menu-content">
+          <button id="close-menu" class="close-button" aria-label="Close menu">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <a href="index.html"
+            ><picture class="menu-logo" style="padding-bottom: 40px">
+              <source
+                srcset="./img/header-logo.png 1x, ./img/header-logo@2x.png 2x"
+                media="(max-width: 767px)"
+                type="image/png"
+              />
+              <img
+                style="padding-bottom: 40px"
+                src="./img/tablet-logo.png"
+                srcset="./img/tablet-logo@2x.png 2x"
+                alt="Your Logo"
+                width="32"
+                height="32"
+              /> </picture
+          ></a>
+          <ul class="menu-list">
+            <li id="home1">
+              <a class="hover-text2" href="index.html">HOME</a>
+            </li>
+            <li id="catalog1">
+              <a class="hover-text2" href="catalog.html">CATALOG</a>
+            </li>
+            <li id="my-library1">
+              <a class="hover-text2" href="my-library.html">MY LIBRARY</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="backdrop"></div>
+    </div>
+    <div class="theme-slider-container">
+      <label class="switch">
+        <!-- <input type="checkbox" id="theme-toggle" /> -->
+        <span class="slider round">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            style="
+              fill: none;
+              stroke: #ffffff;
+              stroke-width: 2px;
+              margin-left: 4px;
+              margin-top: 5px;
+            "
+          >
+            <path
+              d="M20 12.92A9.503 9.503 0 0 1 9.78 3.8 7.5 7.5 0 0 0 4 12c0 4.15 3.35 7.5 7.5 7.5 4.19 0 7.63-3.4 7.75-7.6V12.92z"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            style="
+              fill: none;
+              stroke: #ffffff;
+              stroke-width: 2px;
+              margin-left: 19px;
+            "
+          >
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M18.66 18.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M18.66 5.34l1.41-1.41"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+  </div>
+</header>
+
+    <main>
+      <section class="hero"></section>
+
+      <section class="catalog-search">
+  <div class="container">
+    <form class="catalog-search-form" id="search-form">
+      <div class="catalog-wrapper-selector">
+        <input
+          class=" catalog-search-input"
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Film"
+        />
+        <button
+          type="button"
+          class=" catalog-button-reset hidden"
+        >
+          <svg class="icon-reset" width="24" height="24">
+            <use href="./img/symbols.svg#close"></use>
+          </svg>
+        </button>
+        <select class="catalog-selector year" id="year" name="year" >
+          <option value=" " selected>Year</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+        </select>
+        <label>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </label>
+      </div>
+      <div class="catalog-wrapper-selector catalog-wrapper-selector-down">
+        <select class="catalog-selector country" id="country" name="country" >
+          <option value="" selected>Country</option>
+          <option value="USA">USA</option>
+          <option value="Great Britain">Great Britain</option>
+          <option value="France">France</option>
+          <option value="Spain">Spain</option>
+          <option value="Mexico">Mexico</option>
+          <option value="Italy">Italy</option>
+          <option value="Germany">Germany</option>
+          <option value="Canada">Canada</option>
+          <option value="Portugal">Portugal</option>
+        </select>
+        <label>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </label>
+        <button
+          type="submit"
+          class="button btn-gradient catalog-search-button"
+        >
+          <svg class="icon-search" width="20" height="20">
+            <use href="./img/symbols.svg#search"></use>
+          </svg>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+      <section class="catalog-film-section">
+  <div class="container">
+    <ul class="catalog-list"></ul>
+    <div id="tui-pagination-container" class="tui-pagination"></div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="footer-container container">
+    <p class="footer-text">
+      <span class="footer-copyright"> &copy;</span> 2023 | All Rights Reserved |
+    </p>
+    <p class="footer-text">
+      Developed with
+      <svg class="orange_heart" width="14px" height="12.88px">
+        <use href="./img/symbols.svg#orange-heart"></use>
+      </svg>
+      by
+      <button class="footer-btn" id="our-team-btn">GoIT Students</button>
+    </p>
+  </div>
+</footer>
+
+    <div class="team team__backdrop is-hidden">
+  <div class="team__wrapper container">
+    <button class="team__modal-close-btn" type="button">
+      <svg class="team__modal-close-icon" width="20" height="20">
+        <use href="./img/symbols.svg#icon-close"></use>
+      </svg>
+    </button>
+    <h2 class="team__title">Our cool team</h2>
+    <ul class="team__list">
+      <li class="team__item">
+        <div class="team__wrap">
+          <div class="team-img-wrap">
+            <img
+              class="team__img"
+              loading="lazy"
+              src="./img/01-ilia-shatokhin.jpg"
+              alt="Illia-Shatokhin"
+              width="240"
+            />
+          </div>
+        </div>
+        <div class="team__box">
+          <h2 class="team__member">Illia Shatokhin</h2>
+          <p class="team__role">Team Lead | Developer</p>
+          <a
+            class="team__link-linkedin team__link-linkedin--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://www.linkedin.com/in/illia-shatokhin-48b247265/"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a
+            class="team__link-github team__link-github--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://github.com/Illia-Shatokhin"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="team__item">
+        <div class="team__wrap">
+          <img
+            class="team__img"
+            loading="lazy"
+            src="./img/02-ruslana-onyshchuk.jpeg"
+            alt="Ruslana Onyshchuk"
+          />
+        </div>
+        <div class="team__box">
+          <p class="team__member">Ruslana Onyshchuk</p>
+          <p class="team__role">Scrum Master | Developer</p>
+          <a
+            class="team__link-linkedin team__link-linkedin--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://www.linkedin.com/in/ruslana-onyshchuk-527872267/"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a
+            class="team__link-github team__link-github--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://github.com/Ruslaana"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="team__item">
+        <div class="team__wrap">
+          <img
+            class="team__img"
+            loading="lazy"
+            src="./img/03-daryna-tarasenko.jpg"
+            alt="Daryna Tarasenko"
+          />
+        </div>
+        <div class="team__box">
+          <p class="team__member">Daryna Tarasenko</p>
+          <p class="team__role">Front End Developer</p>
+          <a
+            class="team__link-linkedin team__link-linkedin--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://www.linkedin.com/in/tarasenko-daryna-527084246"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a
+            class="team__link-github team__link-github--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://github.com/DarynaTar"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="team__item">
+        <div class="team__wrap">
+          <img
+            class="team__img"
+            loading="lazy"
+            src="./img/04-hennadii-samofal.jpg"
+            alt="Hennadii Samofal"
+          />
+        </div>
+        <div class="team__box">
+          <p class="team__member">Hennadii Samofal</p>
+          <p class="team__role">Front End Developer</p>
+          <a
+            class="team__link-linkedin team__link-linkedin--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="http://linkedin.com/in/hennadii-samofal-a7b564278"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a
+            class="team__link-github team__link-github--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://github.com/Cosmits"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="team__item">
+        <div class="team__wrap">
+          <img
+            class="team__img"
+            loading="lazy"
+            src="./img/05-kateryna-kharkova.jpg"
+            alt="Kateryna Kharkova"
+          />
+        </div>
+        <div class="team__box">
+          <p class="team__member">Katerina Kharkova</p>
+          <p class="team__role">Front End Developer</p>
+          <a
+            class="team__link-linkedin team__link-linkedin--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://www.linkedin.com/in/kateryna-kha/"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a
+            class="team__link-github team__link-github--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://github.com/KaterinaKha"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="team__item">
+        <div class="team__wrap">
+          <img
+            class="team__img"
+            loading="lazy"
+            src="./img/06-nadiia-samborska.jpg"
+            alt="Nadiia Samborska"
+          />
+        </div>
+        <div class="team__box">
+          <p class="team__member">Nadiia Samborska</p>
+          <p class="team__role">Front End Developer</p>
+          <a
+            class="team__link-linkedin team__link-linkedin--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://www.linkedin.com"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a
+            class="team__link-github team__link-github--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://github.com/sNadiia"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="team__item">
+        <div class="team__wrap">
+          <img
+            class="team__img"
+            loading="lazy"
+            src="./img/07-serhii-podhornyi.jpg"
+            alt="Serhii Podhornyi"
+          />
+        </div>
+        <div class="team__box">
+          <p class="team__member">Serhii Podhornyi</p>
+          <p class="team__role">Front End Developer</p>
+          <a
+            class="team__link-linkedin team__link-linkedin--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://www.linkedin.com/in/%D1%81%D0%B5%D1%80%D0%B3%D1%96%D0%B9-%D0%BF%D0%BE%D0%B4%D0%B3%D0%BE%D1%80%D0%BD%D0%B8%D0%B9-6521b3279/"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a
+            class="team__link-github team__link-github--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://github.com/SerJ1327"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="team__item">
+        <div class="team__wrap">
+          <img
+            class="team__img"
+            loading="lazy"
+            src="./img/08-daryna-merkulova.jpg"
+            alt="Daryna Merkulova"
+          />
+        </div>
+        <div class="team__box">
+          <p class="team__member">Daryna Merkulova</p>
+          <p class="team__role">Front End Developer</p>
+          <a
+            class="team__link-linkedin team__link-linkedin--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://www.linkedin.com"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a
+            class="team__link-github team__link-github--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://github.com/DarinaMerkulova"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="team__item">
+        <div class="team__wrap">
+          <img
+            class="team__img"
+            loading="lazy"
+            src="./img/09-volodymyr-kozlovskyi.jpg"
+            alt="Volodymyr Kozlovskyi"
+          />
+        </div>
+        <div class="team__box">
+          <p class="team__member">Volodymyr Kozlovskyi</p>
+          <p class="team__role">Front End Developer</p>
+          <a
+            class="team__link-linkedin team__link-linkedin--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://www.linkedin.com"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a
+            class="team__link-github team__link-github--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://github.com/VolodymyrKoz"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="team__item">
+        <div class="team__wrap">
+          <img
+            class="team__img"
+            loading="lazy"
+            src="./img/10-olena-tshevik.jpg"
+            alt="Olena Tshevik"
+          />
+        </div>
+        <div class="team__box">
+          <p class="team__member">Olena Tshevik</p>
+          <p class="team__role">Front End Developer</p>
+          <a
+            class="team__link-linkedin team__link-linkedin--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://www.linkedin.com"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a
+            class="team__link-github team__link-github--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://github.com/olita16"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="team__item">
+        <div class="team__wrap">
+          <img
+            class="team__img"
+            loading="lazy"
+            src="./img/11-halyna-kantser.jpg"
+            alt="Halyna Kantser"
+          />
+        </div>
+        <div class="team__box">
+          <p class="team__member">Halyna Kantser</p>
+          <p class="team__role">Front End Developer</p>
+          <a
+            class="team__link-linkedin team__link-linkedin--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="http://linkedin.com/in/galyna-kantser-70098a278"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a
+            class="team__link-github team__link-github--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://github.com/mandarinca"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="team__item">
+        <div class="team__wrap">
+          <img
+            class="team__img"
+            loading="lazy"
+            src="./img/12-gabriella-marusyak.jpg"
+            alt="Gabriella Marusyak"
+          />
+        </div>
+        <div class="team__box">
+          <p class="team__member">Gabriella Marusyak</p>
+          <p class="team__role">Front End Developer</p>
+          <a
+            class="team__link-linkedin team__link-linkedin--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://www.linkedin.com/in/gabriella-marusyak-322190278/"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a
+            class="team__link-github team__link-github--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://github.com/GabriellaMar"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="team__item">
+        <div class="team__wrap">
+          <img
+            class="team__img"
+            loading="lazy"
+            src="./img/13-Dmytro-Yermakov.jpg"
+            alt="Dmytro Yermakov"
+          />
+        </div>
+        <div class="team__box">
+          <p class="team__member">Dmytro Yermakov</p>
+          <p class="team__role">Front End Developer</p>
+          <a
+            class="team__link-linkedin team__link-linkedin--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://www.linkedin.com/in/dmytro-yermakov-b23312141/"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a
+            class="team__link-github team__link-github--active"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://github.com/DmytroErmakov"
+          >
+            <svg class="team__icon" width="25" height="25">
+              <use href="./img/symbols.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <button type="button" class="button-to-header">
+      <svg class="button-to-header-icon" width="24" height="24">
+        <use href="./img/symbols.svg#icon-arrow-up2"></use>
+      </svg>
+    </button>
+    
+  </body>
+</html>
