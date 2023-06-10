@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "vite --open",
-    "build": "vite build --base=/js-project-team-3/",
+    "build": "vite build --base=/js_78_Illia-Shatokhin/",
     "preview": "vite preview"
   },
   "devDependencies": {
